@@ -20,6 +20,28 @@ Dans ce dépôt, vous trouverez :
 ## Explication 
 Dans ce code, j'ai ajouté des commentaires en français pour expliquer chaque étape du code. Le code allume et éteint une LED connectée à la broche 2 de la carte Arduino, en alternance toutes les secondes, et envoie des messages via la communication série pour indiquer l'état de la LED.
 
+### Voici une explication étape par étape du code :
+
+#### 1 - Déclaration des variables et inclusion de la bibliothèque Servo :
+
+- `led` : entier définissant le numéro de la broche de l'Arduino utilisée pour la LED (pin 2).
+
+#### 2 - Configuration initiale dans la fonction `setup()` :
+
+- Initialise la communication série avec une vitesse de transmission de 9600 baud.
+- Configure la broche de la LED (pin 2) en mode sortie.
+
+#### 3 - Boucle principale dans la fonction `loop()` :
+
+- Utilise `digitalWrite()` pour allumer la LED en envoyant un signal HIGH (niveau logique haut) à la broche 2.
+- Envoie un message ("La led est allumee") sur le moniteur série pour indiquer que la LED est allumée.
+- Attends 1 seconde (1000 millisecondes) avec la fonction `delay()`.
+- Utilise `digitalWrite()` pour éteindre la LED en envoyant un signal LOW (niveau logique bas) à la broche 2.
+- Envoie un message ("La led est eteinte") sur le moniteur série pour indiquer que la LED est éteinte.
+- Attends 1 seconde (1000 millisecondes) avec la fonction `delay()`.
+
+La boucle `loop()` continue de s'exécuter indéfiniment, faisant ainsi clignoter la LED toutes les secondes.
+
 ## Poids du programme
 ```sh
 Sketch uses 2028 bytes (6%) of program storage space. Maximum is 32256 bytes.

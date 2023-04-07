@@ -42,6 +42,7 @@ Ce code est conçu pour être utilisé avec un capteur de distance à ultrasons.
 - Affiche la distance calculée sur le moniteur série.
 - Attends 1 seconde avant de répéter la mesure.
 
+La boucle `loop()` s'exécute indéfiniment, ce qui fait logger la distance entre le capteur et l'objet.
 
 ## Poids du programme
 ```sh

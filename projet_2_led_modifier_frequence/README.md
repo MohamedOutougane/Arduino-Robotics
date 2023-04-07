@@ -42,6 +42,7 @@ Ce code est conçu pour faire clignoter une LED connectée à la broche 2 de la 
 - Affichage de la durée donnée par le potentiomètre dans la communication série.
 - Allumage de la LED, affichage de l'état dans la communication série, puis attente de la durée déterminée par le potentiomètre.
 - Extinction de la LED, affichage de l'état dans la communication série, puis attente de la durée déterminée par le potentiomètre.
+
 La boucle `loop()` s'exécute indéfiniment, ce qui fait clignoter la LED avec la durée d'allumage et d'extinction contrôlée par le potentiomètre.
 
 ## Poids du programme
